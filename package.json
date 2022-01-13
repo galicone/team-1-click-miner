@@ -1,7 +1,7 @@
 {
   "name": "safex-community-miner",
   "productName": "Safex Community Miner",
-  "version": "0.0.26",
+  "version": "0.0.27",
   "description": "Safex Community Miner",
   "main": "src/index.js",
   "scripts": {
@@ -48,8 +48,8 @@
           "name": "@electron-forge/publisher-github",
           "config": {
             "repository": {
-              "owner": "galicone",
-              "name": "safex-community-one-click-miner"
+              "owner": "safex",
+              "name": "team-1-click-miner"
             }
           }
         }
