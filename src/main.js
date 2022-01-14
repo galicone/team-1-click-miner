@@ -12,6 +12,11 @@ function stopMining() {
 
 async function startStopMining() {
     if (startStopBtn.innerHTML == "Start") {
+        if (!miningAddress.value) {
+            hasrateParagraph.innerHTML = 'Please enter Safex address';
+            return;
+        }
+
         startMining();
 
         startStopBtn.innerHTML = "Stop";
