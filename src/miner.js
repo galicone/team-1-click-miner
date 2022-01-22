@@ -8,6 +8,7 @@ const PLATFORM = os.platform().toLowerCase();
 const LINUX_PATH = path.join(__dirname, './resources/linux/xmrig');
 const WINDOWS_PATH = path.join(__dirname, './resources/windows/xmrig.exe');
 const MAC_PATH = path.join(__dirname, './resources/mac/xmrig');
+const MAC_PATH_M1 = path.join(__dirname, './resources/mac_m1/xmrig');
 
 module.exports = class Miner {
     filePath = null;
@@ -24,7 +25,11 @@ module.exports = class Miner {
         } else if (PLATFORM === 'win32') {
             this.loadWindows();
         } else if (PLATFORM === 'darwin') {
-            this.loadMac();
+            if (os.arch() === 'arm' || os.arch() === 'arm64') {
+                this.loadMacM1
+            } else {
+                this.loadMac();
+            }
         }
 
         else {
@@ -60,6 +65,10 @@ module.exports = class Miner {
 
     loadMac() {
         this.filePath = MAC_PATH
+    }
+
+    loadMacM1() {
+        this.filePath = MAC_PATH_M1
     }
 
     exec(address, poolUrl, cpuUsage, minerName) {
