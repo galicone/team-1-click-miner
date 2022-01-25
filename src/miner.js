@@ -26,7 +26,7 @@ module.exports = class Miner {
             this.loadWindows();
         } else if (PLATFORM === 'darwin') {
             if (os.arch() === 'arm' || os.arch() === 'arm64') {
-                this.loadMacM1
+                this.loadMacM1();
             } else {
                 this.loadMac();
             }
@@ -64,11 +64,11 @@ module.exports = class Miner {
     }
 
     loadMac() {
-        this.filePath = MAC_PATH
+        this.filePath = MAC_PATH;
     }
 
     loadMacM1() {
-        this.filePath = MAC_PATH_M1
+        this.filePath = MAC_PATH_M1;
     }
 
     exec(address, poolUrl, cpuUsage, minerName) {
