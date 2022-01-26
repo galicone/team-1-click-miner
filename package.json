@@ -1,7 +1,7 @@
 {
   "name": "safex-community-miner",
   "productName": "Safex Community Miner",
-  "version": "0.0.30",
+  "version": "0.0.31",
   "description": "Safex Community Miner",
   "main": "src/index.js",
   "scripts": {
@@ -29,7 +29,7 @@
           }
         },
         {
-          "name": "@electron-forge/maker-zip",
+          "name": "@electron-forge/maker-dmg",
           "platforms": [
             "darwin"
           ]
@@ -73,7 +73,7 @@
     "@electron-forge/maker-deb": "^6.0.0-beta.61",
     "@electron-forge/maker-rpm": "^6.0.0-beta.61",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.61",
-    "@electron-forge/maker-zip": "^6.0.0-beta.61",
+    "@electron-forge/maker-dmg": "^6.0.0-beta.61",
     "@electron-forge/publisher-github": "^6.0.0-beta.61",
     "electron": "16.0.5"
   }
