@@ -20,6 +20,7 @@ module.exports = class Miner {
     }
 
     async init() {
+        console.log(os.arch());
         if (PLATFORM === 'linux') {
             this.loadLinux();
         } else if (PLATFORM === 'win32') {
@@ -56,18 +57,22 @@ module.exports = class Miner {
     }
 
     loadLinux() {
+        console.log('Running on Linux');
         this.filePath = LINUX_PATH;
     }
 
     loadWindows() {
+        console.log('Running on Windows');
         this.filePath = WINDOWS_PATH;
     }
 
     loadMac() {
+        console.log('Running on Mac');
         this.filePath = MAC_PATH;
     }
 
     loadMacM1() {
+        console.log('Running on Mac M1');
         this.filePath = MAC_PATH_M1;
     }
 
