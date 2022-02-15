@@ -25,10 +25,24 @@
     "electron": "16.0.5",
     "electron-builder": "^22.14.13"
   },
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "name": "safex-community-miner"
+      }
+    }
+  },
   "build": {
     "appId": "com.electron.one-click-miner",
     "win": {
       "target": "nsis"
+    },
+    "mac": {
+      "category": "public.app-category.business",
+      "type": "distribution",
+      "target": [
+        "dmg"
+      ]
     },
     "asar": false
   }
