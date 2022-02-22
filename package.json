@@ -35,11 +35,13 @@
   "build": {
     "appId": "com.electron.one-click-miner",
     "win": {
-      "target": "nsis"
+      "target": "nsis",
+      "icon": "src/public/images/icon.png"
     },
     "mac": {
       "category": "public.app-category.business",
       "type": "distribution",
+      "icon": "src/public/images/icon.png",
       "target": [
         "dmg"
       ]
@@ -49,6 +51,7 @@
         "deb",
         "rpm"
       ],
+      "icon": "src/public/images/icon.png",
       "category": "Utility"
     },
     "asar": false
