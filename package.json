@@ -1,7 +1,7 @@
 {
   "name": "safex-community-miner",
   "productName": "Safex Community Miner",
-  "version": "0.0.32",
+  "version": "1.0.0",
   "description": "Safex Community Miner",
   "main": "src/index.js",
   "scripts": {
