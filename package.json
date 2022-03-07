@@ -42,9 +42,13 @@
       "category": "public.app-category.business",
       "type": "distribution",
       "icon": "src/public/images/icon.png",
-      "target": [
-        "dmg"
-      ]
+      "target": {
+        "target": "default",
+        "arch": [
+          "x64",
+          "arm64"
+        ]
+      }
     },
     "linux": {
       "target": [
