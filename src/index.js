@@ -8,7 +8,7 @@ if (require('electron-squirrel-startup')) { // eslint-disable-line global-requir
 }
 
 contextMenu({
-  showInspectElement: false
+  showInspectElement: true
 });
 
 const createWindow = () => {

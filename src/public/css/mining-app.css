@@ -28,7 +28,6 @@ header {
   z-index: 1;
   margin: -30px 0 25px;
   position: relative;
-  
 }
 header .close {
   position: absolute;
@@ -37,10 +36,10 @@ header .close {
   color: #fff;
   opacity: 1;
   font-size: 19px;
-  font-family: "Brandon Grotesque Bold", Helvetica, Arial,sans-serif;
+  font-family: "Brandon Grotesque Bold", Helvetica, Arial, sans-serif;
 }
 header .close.fadeIn {
-  animation-delay: .8s;
+  animation-delay: 0.8s;
 }
 header .close:focus,
 header .close:hover {
@@ -48,7 +47,7 @@ header .close:hover {
   opacity: 1;
 }
 header img.fadeIn {
-  animation-delay: .3s;
+  animation-delay: 0.3s;
 }
 header p {
   color: #fff;
@@ -58,7 +57,7 @@ header p {
   margin-bottom: 0;
 }
 header p.fadeIn {
-  animation-delay: .8s;
+  animation-delay: 0.8s;
 }
 
 /* Main */
@@ -70,7 +69,7 @@ header p.fadeIn {
   top: 0;
 }
 .main.fadeIn {
-  animation-delay: .3s;
+  animation-delay: 0.3s;
 }
 .btns-wrap {
   margin-bottom: 8px;
@@ -80,14 +79,16 @@ header p.fadeIn {
   text-align: center;
   margin-bottom: 10px;
 }
-.address-wrap, .miner-name-wrap {
+.address-wrap,
+.miner-name-wrap {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 12px;
 }
-.address-wrap input, .miner-name-wrap input {
+.address-wrap input,
+.miner-name-wrap input {
   width: calc(100% - 420px);
   z-index: 2;
   display: inline-block;
@@ -120,37 +121,41 @@ header p.fadeIn {
   box-shadow: 0 0 30px 0 rgba(0, 199, 236, 0.5) !important;
 }
 .main form input[disabled] {
-  color: rgba(255,255,255,.7);
+  color: rgba(255, 255, 255, 0.7);
 }
 .main form input[disabled]:hover {
   box-shadow: none !important;
 }
-.main form input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+.main form input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
   opacity: 1;
   color: #fff;
   font-size: 11px;
   text-transform: uppercase;
 }
-.main form input::-moz-placeholder { /* Firefox 19+ */
+.main form input::-moz-placeholder {
+  /* Firefox 19+ */
   opacity: 1;
   color: #fff;
   font-size: 11px;
   text-transform: uppercase;
 }
-.main form input:-moz-placeholder { /* Firefox 18- */
+.main form input:-moz-placeholder {
+  /* Firefox 18- */
   opacity: 1;
   color: #fff;
   font-size: 11px;
   text-transform: uppercase;
 }
-.main form input:-ms-input-placeholder { /* IE 10+ */
+.main form input:-ms-input-placeholder {
+  /* IE 10+ */
   opacity: 1;
   color: #fff;
   font-size: 11px;
   text-transform: uppercase;
 }
 .main form .pool-url {
-  background: rgba(10, 26, 45, .2);
+  background: rgba(10, 26, 45, 0.2);
   padding: 7px 10px 6px;
   color: #fff;
   border-radius: 8px;
@@ -158,7 +163,7 @@ header p.fadeIn {
   font-size: 14px;
   font-weight: 600;
   line-height: 1;
-  border: 1px solid rgba(255,255,255,.85);
+  border: 1px solid rgba(255, 255, 255, 0.85);
   text-align-last: center;
   height: 30px;
 }
@@ -169,7 +174,7 @@ header p.fadeIn {
   outline: none;
 }
 .main form .pool-url[disabled] {
-  color: rgba(255,255,255,.7);
+  color: rgba(255, 255, 255, 0.7);
 }
 .main form .pool-url[disabled]:hover {
   box-shadow: none !important;
@@ -181,7 +186,7 @@ header p.fadeIn {
   justify-content: center;
   padding: 12px 0 20px;
 }
-.custom-checkbox input[type=checkbox]{
+.custom-checkbox input[type="checkbox"] {
   display: none;
 }
 .custom-checkbox {
@@ -196,7 +201,7 @@ header p.fadeIn {
   display: inline-block;
   width: auto;
 }
-.custom-checkbox:before{
+.custom-checkbox:before {
   content: "";
   background: url(../images/check-off.png);
   background-size: 100% 100%;
@@ -207,8 +212,8 @@ header p.fadeIn {
   left: 0;
   top: 4px;
 }
-.custom-checkbox.checked:before{
-  background: url('../images/check-on.png');
+.custom-checkbox.checked:before {
+  background: url("../images/check-on.png");
   background-size: 100% 100%;
 }
 .main form #cpuUsage {
@@ -216,8 +221,8 @@ header p.fadeIn {
   font-weight: 600;
   line-height: 1;
   padding: 2px 29px 3px 12px;
-  border: 1px solid rgba(255,255,255,.85);
-  background-color: rgba(28, 170, 203, .35);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  background-color: rgba(28, 170, 203, 0.35);
   color: #fff;
   border-radius: 10px;
   text-align-last: center;
@@ -235,17 +240,17 @@ header p.fadeIn {
 }
 .main form #cpuUsage:focus {
   outline: none;
-  border: 1px solid rgba(255,255,255,.85);
+  border: 1px solid rgba(255, 255, 255, 0.85);
 }
 .main form #cpuUsage[disabled] {
-  color: rgba(255,255,255,.7);
+  color: rgba(255, 255, 255, 0.7);
 }
 .main form #cpuUsage[disabled]:hover {
   box-shadow: none !important;
   cursor: initial;
 }
 .main form .input-group p {
-  font-family: 'Avenir Bold', sans-serif;
+  font-family: "Avenir Bold", sans-serif;
   text-transform: uppercase;
   color: #fff;
   margin-bottom: 0;
@@ -315,7 +320,7 @@ header p.fadeIn {
 .block,
 .hashrate,
 .balance {
-  font-family: 'Courier New', Helvetica, Arial, sans-serif;
+  font-family: "Courier New", Helvetica, Arial, sans-serif;
   font-size: 18px;
 }
 .block,
@@ -347,7 +352,7 @@ header p.fadeIn {
   text-align: right;
 }
 .blue-text-cpu-model {
-  font-family: 'Courier New', Helvetica, Arial, sans-serif;
+  font-family: "Courier New", Helvetica, Arial, sans-serif;
   font-size: 12px;
   line-height: 1;
   color: #00deff;
@@ -359,7 +364,7 @@ header p.fadeIn {
   text-align: right;
 }
 .white-text-cpu-model {
-  font-family: 'Courier New', Helvetica, Arial, sans-serif;
+  font-family: "Courier New", Helvetica, Arial, sans-serif;
   font-size: 12px;
   color: #fff;
   margin-bottom: 0;
@@ -374,4 +379,135 @@ header p.fadeIn {
   .mining-bg-wrap img {
     max-width: 800px;
   }
+}
+#addPoolButton,
+#cancelAddPoolButton {
+  border-radius: 4px; /* Even smaller radius for a more refined look */
+  background-color: rgba(18, 190, 221, 0.45); /* Same as START button */
+  color: #fff;
+  font-size: 14px; /* Reduced font size for smaller appearance */
+  font-weight: 700; /* Keeping the boldness */
+  text-transform: uppercase;
+  letter-spacing: 0.8px; /* Slightly adjusted letter spacing */
+  line-height: 1.2;
+  border: 2px solid #60c9e6; /* Same border style */
+  padding: 4px 8px; /* Reduced padding for a smaller size */
+  width: auto; /* Auto width based on content */
+  cursor: pointer; /* Ensure it's clear these are clickable */
+  transition: all 0.2s ease-in; /* Smooth transition for interactions */
+  margin: 0 5px; /* Add some margin if buttons are next to each other */
+}
+
+#cancelAddPoolButton {
+  background-color: rgba(221, 18, 99, 0.4);
+  border: 2px solid #ff004e;
+}
+
+#addPoolButton:hover {
+  box-shadow: 0 0 20px 0 rgba(0, 199, 236, 0.5) !important; /* Adjusted hover effect */
+}
+
+#cancelAddPoolButton:hover {
+  box-shadow: 0 0 30px 0 rgba(200, 14, 75, 1) !important;
+}
+
+#addPoolButton:active,
+#cancelAddPoolButton:active {
+  box-shadow: none !important; /* Active state effect */
+}
+
+#addPoolModal {
+  display: none; /* Change to block or flex when you want to show the modal */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(196, 205, 235, 0.5);
+  z-index: 200;
+  backdrop-filter: blur(5px);
+}
+
+#addPoolModal > div {
+  background-color: #3b90db;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #a2ccff;
+  width: 400px;
+  height: auto; /* Adjusted to accommodate content */
+  margin: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+/* Additional styles for the buttons to make them sit next to each other */
+#addPoolButton,
+#cancelAddPoolButton {
+  margin: 0 5px; /* Adjust spacing between buttons */
+}
+
+#newPoolUrl {
+  width: calc(100% - 90px);
+  left: 42px;
+  background: url(../images/input-bg.png) repeat-y top left;
+  transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  color: rgb(255, 255, 255);
+}
+
+#newPoolUrl:hover,
+#newPoolUrl:active,
+#newPoolUrl:focus {
+  box-shadow: 0 0 30px 0 rgba(0, 199, 236, 0.5) !important;
+}
+#newPoolUrl[disabled] {
+  color: rgba(255, 255, 255, 0.7);
+}
+#newPoolUrl[disabled]:hover {
+  box-shadow: none !important;
+}
+#newPoolUrl::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  opacity: 1;
+  color: #fff;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+#newPoolUrl::-moz-placeholder {
+  /* Firefox 19+ */
+  opacity: 1;
+  color: #fff;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+#newPoolUrl:-moz-placeholder {
+  /* Firefox 18- */
+  opacity: 1;
+  color: #fff;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+#newPoolUrl:-ms-input-placeholder {
+  /* IE 10+ */
+  opacity: 1;
+  color: #fff;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+#hashrateStats {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  color: white;
+  z-index: 10;
 }

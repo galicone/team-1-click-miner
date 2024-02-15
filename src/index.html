@@ -16,6 +16,10 @@
 <body>
   <p class="blue-text-cpu-model">CPU Model:</p>
   <p class="white-text-cpu-model" id="cpuModel"></p>
+  <div class="hashrate-stats" id="hashrateStats">
+    <!-- Hashrate stats will be displayed here -->
+  </div>
+  
   <div class="mining-app-wrap">
     <div class="mining-bg-wrap">
       <img id="backgroundImg" class="" src="public/images/circles.png" alt="Circles" />
@@ -41,10 +45,6 @@
         </br>
 
         <select class="button-shine pool-url" name="pool" id="pool" title="Choose the pool you want to connect to">
-          <option>pool.safex.org:3311</option>
-          <option>eu.pool.safex.ninja:3311</option>
-          <option>usa.pool.safex.ninja:3311</option>
-          <option>aus.pool.safex.ninja:3311</option>
         </select>
 
         <div class="options">
@@ -70,6 +70,23 @@
     </div>
 
   </div>
+  <!-- Popup Modal for Adding New Pool -->
+  <div id="addPoolModal">
+    <div>
+    </br>
+      <div class="miner-name-wrap">
+        <input type="text" placeholder="Enter new pool URL" name="newPoolUrl" id="newPoolUrl"
+          title="Your new pool URL" />
+      </div>
+    </br>
+      <div style="text-align: center;">
+        <button id="addPoolButton">Add</button>
+        <button id="cancelAddPoolButton">Cancel</button>
+      </div>
+    </div>
+  </div>
+  
+
 </body>
 
 </html>
