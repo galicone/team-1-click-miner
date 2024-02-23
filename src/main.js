@@ -118,6 +118,14 @@ function loadAndPopulateAddress() {
 
 function closeAddPoolModal() {
     document.getElementById('addPoolModal').style.display = 'none';
+    // Reset the pool dropdown to the last selected pool if the user cancels adding a new pool
+    const poolSelect = document.getElementById('pool');
+    if (lastSelectedPool) {
+        poolSelect.value = lastSelectedPool;
+    } else {
+        // In case there's no last selected pool (e.g., first visit), you might want to set a default
+        poolSelect.selectedIndex = 0; // This sets it to the first pool in your list, adjust as needed
+    }
 }
 
 async function fetchHashrateStats() {
@@ -141,6 +149,14 @@ function openConfirmDeletePoolModal() {
 
 function closeConfirmDeletePoolModal() {
     document.getElementById('confirmDeletePoolModal').style.display = 'none';
+    
+    const poolSelect = document.getElementById('pool');
+    if (lastSelectedPool) {
+        poolSelect.value = lastSelectedPool;
+    } else {
+        // In case there's no last selected pool (e.g., first visit), you might want to set a default
+        poolSelect.selectedIndex = 0; // This sets it to the first pool in your list, adjust as needed
+    }
 }
 
 async function startStopMining() {
