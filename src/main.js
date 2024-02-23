@@ -135,6 +135,13 @@ function updateHashrateDisplay(data) {
     document.getElementById('hashrateStats').innerText = `Network Hashrate: ${totalHashrate} MH/s`;
 }
 
+function openConfirmDeletePoolModal() {
+    document.getElementById('confirmDeletePoolModal').style.display = 'block';
+}
+
+function closeConfirmDeletePoolModal() {
+    document.getElementById('confirmDeletePoolModal').style.display = 'none';
+}
 
 async function startStopMining() {
     if (startStopBtn.innerHTML == "Start") {
@@ -182,8 +189,8 @@ document.getElementById('pool').addEventListener('change', function() {
         document.getElementById('addPoolModal').style.display = 'block';
     } else if (this.value === 'delete_selected_pool') {
         // When the delete option is selected, use lastSelectedPool for deletion
-        if (lastSelectedPool && confirm(`Are you sure you want to delete ${lastSelectedPool}?`)) {
-            deleteSelectedPool(lastSelectedPool);
+        if (lastSelectedPool) {
+            openConfirmDeletePoolModal();
         } else {
             // Reset the selection to the last selected pool if the user cancels the deletion
             document.getElementById('pool').value = lastSelectedPool;
@@ -192,6 +199,19 @@ document.getElementById('pool').addEventListener('change', function() {
         // Update lastSelectedPool with the currently selected pool
         lastSelectedPool = this.value;
     }
+});
+
+// Handle the "Yes" button click for deleting the pool
+document.getElementById('confirmDeletePoolButton').addEventListener('click', function() {
+    if (lastSelectedPool) {
+        deleteSelectedPool(lastSelectedPool);
+        closeConfirmDeletePoolModal(); // Close the modal on confirmation
+    }
+});
+
+// Handle the "No" button click to simply close the modal
+document.getElementById('cancelDeletePoolButton').addEventListener('click', function() {
+    closeConfirmDeletePoolModal();
 });
 
 fetchHashrateStats();

@@ -381,7 +381,10 @@ header p.fadeIn {
   }
 }
 #addPoolButton,
-#cancelAddPoolButton {
+#cancelAddPoolButton,
+#cancelAddPoolButton,
+#cancelDeletePoolButton,
+#confirmDeletePoolButton {
   border-radius: 4px; /* Even smaller radius for a more refined look */
   background-color: rgba(18, 190, 221, 0.45); /* Same as START button */
   color: #fff;
@@ -398,25 +401,30 @@ header p.fadeIn {
   margin: 0 5px; /* Add some margin if buttons are next to each other */
 }
 
-#cancelAddPoolButton {
+#cancelAddPoolButton,
+#cancelDeletePoolButton {
   background-color: rgba(221, 18, 99, 0.4);
   border: 2px solid #ff004e;
 }
 
-#addPoolButton:hover {
+#addPoolButton:hover,
+#confirmDeletePoolButton:hover {
   box-shadow: 0 0 20px 0 rgba(0, 199, 236, 0.5) !important; /* Adjusted hover effect */
 }
 
-#cancelAddPoolButton:hover {
+#cancelAddPoolButton:hover,
+#cancelDeletePoolButton:hover {
   box-shadow: 0 0 30px 0 rgba(200, 14, 75, 1) !important;
 }
 
 #addPoolButton:active,
-#cancelAddPoolButton:active {
+#confirmDeletePoolButton:active,
+#cancelAddPoolButton:active #cancelDeletePoolButton:active {
   box-shadow: none !important; /* Active state effect */
 }
 
-#addPoolModal {
+#addPoolModal,
+#confirmDeletePoolModal {
   display: none; /* Change to block or flex when you want to show the modal */
   position: fixed;
   left: 0;
@@ -428,7 +436,8 @@ header p.fadeIn {
   backdrop-filter: blur(5px);
 }
 
-#addPoolModal > div {
+#addPoolModal > div,
+#confirmDeletePoolModal > div {
   background-color: #3b90db;
   border-radius: 12px;
   padding: 20px;
@@ -448,7 +457,8 @@ header p.fadeIn {
 
 /* Additional styles for the buttons to make them sit next to each other */
 #addPoolButton,
-#cancelAddPoolButton {
+#confirmDeletePoolButton,
+#cancelAddPoolButton #cancelDeletePoolButton {
   margin: 0 5px; /* Adjust spacing between buttons */
 }
 
